@@ -109,6 +109,22 @@ p {
 
 .nav-list .current {
   color: var(--accent-color);
+  position: relative;
+}
+
+.current::after {
+  position: absolute;
+  bottom: 0;
+  right: -1.86px;
+
+  display: block;
+  content: '';
+  width: 48px;
+  height: 4px;
+
+  background-color: #2196f3;
+  border-radius: 2px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .nav-link:hover,
@@ -202,6 +218,36 @@ p {
 .button-primary:hover,
 .button-primary:focus {
   background: #188ce8;
+}
+
+/* Create modal window */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ background: rgba(0, 0, 0, 0.2);
+  
+}
+
+	.backdrop.is-hidden {
+	opacity: 0;
+	pointer-events: none;
+	}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-height: 300px;
+  min-width: 400px;
+  padding: 15px;
+
+  background-color: #fff;
 }
 
 /* Features */
@@ -310,7 +356,27 @@ p {
 }
 
 .work-item {
+  position: relative;
   margin-right: 30px;
+}
+
+.work-name-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  padding: 27px;
+
+  width: 370px;
+
+  background-color: rgba(47, 48, 58, 0.8);
+  color: var(--primary-white-color);
+
+  font-weight: 700;
+  line-height: 1.14;
+
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .work-section,
@@ -449,6 +515,12 @@ p {
 
 /* Portfolio html */
 
+.current-portfolio::after {
+  right: -2.9px;
+
+  width: 78px;
+}
+
 .button-list {
   display: flex;
   justify-content: center;
@@ -491,6 +563,35 @@ p {
 .project-link {
   display: block;
 }
+
+/* Create overlay for card-box */
+
+.box-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.box-overlay:hover .text-overlay {
+  transform: translateY(0);
+}
+
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  padding: 63px 24px;
+
+  color: var(--primary-white-color);
+
+  background-color: rgba(33, 150, 243, 0.9);
+
+  font-size: 18px;
+  line-height: 1.56;
+  transform: translatey(-100%);
+}
+
+/* <<=====>> End create overlay for card-box <<=====>> */
 
 .project-link:hover,
 .project-link:focus {
