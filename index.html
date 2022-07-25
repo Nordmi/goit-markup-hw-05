@@ -58,12 +58,6 @@
             Замовити послугу
           </button>
         </div>
-        <div class="backdrop is-hidden" data-backdrop>
-          <div class="modal">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, voluptates!</p>
-            <button data-close-modal>Закрыть</button>
-          </div>
-        </div>
       </section>
 
       <section class="section feature-section">
@@ -447,6 +441,16 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="button-close" data-modal-close>
+          <svg class="icon-close" width="11" height="11">
+            <use href="./images/icons/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
   </body>
 </html>
