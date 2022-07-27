@@ -594,6 +594,11 @@ p {
   display: block;
 }
 
+.project-link:hover .text-overlay,
+.project-link:focus .text-overlay {
+  transform: translateY(0);
+}
+
 /* Create overlay for card-box */
 
 .box-overlay {
@@ -621,7 +626,8 @@ p {
   transition-timing-function: var(--timing-function);
 }
 
-.box-overlay:hover .text-overlay {
+.project-link:hover .text-overlay,
+.project-link:focus .text-overlay {
   transform: translateY(0);
 }
 
